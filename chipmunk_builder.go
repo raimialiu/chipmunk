@@ -1,13 +1,15 @@
 package chipmunk
 
-import "github.com/raimialiu/chipmunk.git/sources"
+import (
+	"github.com/raimialiu/chipmunk.git/sources"
+)
 
 func (c *Chipmunk) WithPrefix(prefix string) *Chipmunk {
 	c._option.Prefix = prefix
 	return c
 }
 
-func (c *Chipmunk) WithSources(sources ...sources.Source) *Chipmunk {
+func (c *Chipmunk) WithSources(sources ...sources.SourceInterface) *Chipmunk {
 	c._sources = append(c._sources, sources...)
 	return c
 }

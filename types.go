@@ -7,7 +7,7 @@ import (
 type (
 	Chipmunk struct {
 		_option  Options
-		_sources []sources.Source
+		_sources []sources.SourceInterface
 		_target  interface{}
 	}
 
